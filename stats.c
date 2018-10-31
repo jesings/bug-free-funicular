@@ -16,7 +16,7 @@ int main(){
     struct stat* garbagefile=malloc(sizeof(struct stat));
     printf("Looking at: %s\n", filename);
     stat("stats.c",garbagefile);   
-    char* suffixes[7] = {"bytes","kilobytes","megabytes","gigabytes","terabytes","petabytes","yottabytes"};
+    char* suffixes[7] = {"bytes","kilobytes","megabytes","gigabytes","terabytes","petabytes","exabytes", "zettabytes", "yottabytes", "brontobytes", "gegobytes"};
     int logp = log(garbagefile->st_size)/log(1024);
     printf("\nSize of the file is:%.1f %s\n",garbagefile->st_size/pow(1024,logp),suffixes[logp]);
     printf("Exact file size (for larger files) is ");
